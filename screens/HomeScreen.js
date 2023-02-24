@@ -1,5 +1,5 @@
 import { View, Text, Image, TextInput } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
@@ -11,15 +11,18 @@ import {
 import { ScrollView } from "react-native";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
+import sanityClient from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [featured, setFeatured] = useState([]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
   }, []);
+
   return (
     <SafeAreaView className="bg-white pt-5">
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
@@ -51,21 +54,6 @@ const HomeScreen = () => {
         }}
       >
         <Categories />
-        <FeaturedRow
-          title="Near You"
-          description="This is very nais food bois"
-          id="123"
-        />
-        <FeaturedRow
-          title="Featured"
-          description="This is very nais food bois"
-          id="124"
-        />
-        <FeaturedRow
-          title="Hello Darkness My Old Friend"
-          description="This is very nais food bois"
-          id="125"
-        />
       </ScrollView>
     </SafeAreaView>
   );

@@ -32,6 +32,42 @@ const FeaturedRow = ({ title, description, id }) => {
           long={7}
           lat={76}
         />
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="PaniPuri Bois"
+          rating={4.5}
+          genre="Indian"
+          address="Maleshwaram Area"
+          short_description="Test Description must be really long so that it tests the shits out"
+          dishes={[]}
+          long={7}
+          lat={76}
+        />
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="PaniPuri Bois"
+          rating={4.5}
+          genre="Indian"
+          address="Maleshwaram Area"
+          short_description="Test Description must be really long so that it tests the shits out"
+          dishes={[]}
+          long={7}
+          lat={76}
+        />
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="PaniPuri Bois"
+          rating={4.5}
+          genre="Indian"
+          address="Maleshwaram Area"
+          short_description="Test Description must be really long so that it tests the shits out"
+          dishes={[]}
+          long={7}
+          lat={76}
+        />
       </ScrollView>
     </View>
   );
